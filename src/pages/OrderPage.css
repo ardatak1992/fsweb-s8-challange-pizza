@@ -1,0 +1,46 @@
+.page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-content{
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-container{
+  max-width: 600px;
+}
+
+.title{
+  font-size: 1.5rem;
+
+}
+
+.num-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--darkgray);
+}
+
+.price{
+  font-size: 2.0rem;
+  font-weight: bold;
+}
+
+.social-nums{
+  display: flex;
+  gap: 2rem;
+}
+
+.info{
+  line-height: 2rem;
+  color: var(--lightgray);
+}

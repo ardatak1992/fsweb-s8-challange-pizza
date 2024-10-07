@@ -1,0 +1,54 @@
+.banner {
+  background: url("../../Assets/Iteration-1-assets/home-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 2rem;
+}
+
+.logo {
+  width: 300px;
+}
+
+.content h1 {
+  color: var(--beige);
+  letter-spacing: 0.1rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: Barlow;
+  font-weight: 200;
+}
+
+.content h1 span {
+  display: block;
+}
+
+
+@media(max-width:500px){
+  .content h1{
+    font-size: 3rem;
+  }
+}
+
+
+@media(max-width:400px){
+  .content h1{
+    font-size: 2rem;
+  }
+}

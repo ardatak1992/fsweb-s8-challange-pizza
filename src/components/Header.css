@@ -1,0 +1,48 @@
+.header {
+  background-color: var(--red);
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.header-content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid
+}
+
+.logo{
+  width: 400px;
+  align-self: center;
+}
+
+.link-chain{
+  color: var(--beige);
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
+
+.link{
+  font-family: Barlow;
+  color: var(--beige);
+}
+
+.link:hover{
+  color:var(--beige);
+  text-decoration: underline;
+  
+}
+
+.link.active{
+  font-weight: bold;
+}
