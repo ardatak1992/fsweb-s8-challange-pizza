@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Checkbox.css"
 
-const Checkbox = ({ name, form, handleChange }) => {
+const Checkbox = ({ name, form, handleChange,disabled }) => {
   function capitalize(name) {
     const words = name.split(" ");
     return words
@@ -18,8 +18,10 @@ const Checkbox = ({ name, form, handleChange }) => {
         type="checkbox"
         name="toppings"
         value={name}
+        id={name}
         onChange={handleChange}
         checked={form.toppings.includes(name)}
+        disabled={disabled}
       />
       <label htmlFor={name}>
         {capitalize(name)}

@@ -6,6 +6,8 @@ import { Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import OrderPage from "./pages/OrderPage";
 import SuccessPage from "./pages/SuccessPage";
+import Header from "./components/Header";
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
 
   return (
     <>
+    <Header />
       <Switch>
         <Route path="/" exact>
           <HomePage />
@@ -24,7 +27,7 @@ function App() {
           <SuccessPage />
         </Route>
       </Switch>
-      
+      <Footer />
     </>
   );
 }

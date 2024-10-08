@@ -1,0 +1,95 @@
+footer {
+  --backgroundColor: #292929;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  background-color: var(--backgroundColor);
+  padding: 2rem;
+  gap: 2rem;
+  color: white;
+}
+
+.footer-div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--backgroundColor);
+  padding: 2rem;
+  gap: 2rem;
+  width: 90;
+  max-width: 1200px;
+  color: white;
+  
+}
+
+footer h5 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: ce;
+  gap: 2rem;
+  width: 300px;
+  
+  align-items: flex-start;
+}
+
+address li{
+    margin: 1rem -3rem;
+    align-items: center;
+    display: flex;
+    gap : 2rem;
+    
+}
+
+
+.footer-logo {
+  width: 150px;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 300px;
+}
+
+.footer-menu a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.instagram {
+  width: 300px;
+}
+
+.instagram-images {
+  margin-top: 3rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.copyright {
+  display: flex;
+  max-width: 1200px;
+  color: #fff;
+  width: 90%;
+  justify-content: space-between;
+}
+
+hr {
+  opacity: 0.2;
+}
+
+.copyright p {
+  opacity: 0.6;
+}
+
+.copyright a {
+  color: white;
+}

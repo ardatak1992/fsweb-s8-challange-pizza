@@ -1,46 +1,89 @@
-.page{
+.page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.page-content{
+.page-content {
   display: flex;
   width: 100%;
-  max-width: 600px;
-  border: 1px solid;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;
 }
 
-.info-container{
+.info-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--beige);
+  gap: 3rem;
+  width: 100vw;
+}
+
+.link-chain {
+  color: var(--darkgray);
+  align-self: flex-start;
+}
+
+.link {
+  font-family: Barlow;
+  color: var(--darkgray);
+}
+
+.link:hover {
+  color: var(--darkgray);
+  text-decoration: underline;
+}
+
+.link.active {
+  font-weight: bold;
+  color: var(--red);
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
   max-width: 600px;
+  margin-bottom: 2rem;
+  width: 100%;
+  gap: 1rem;
 }
 
-.title{
+.title {
   font-size: 1.5rem;
-
 }
 
-.num-content{
+.num-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--darkgray);
 }
 
-.price{
-  font-size: 2.0rem;
+.price {
+  font-size: 2rem;
   font-weight: bold;
 }
 
-.social-nums{
+.social-nums {
   display: flex;
   gap: 2rem;
 }
 
-.info{
+.info-container .info {
   line-height: 2rem;
   color: var(--lightgray);
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .info-container {
+    padding: 0 2rem;
+  }
+
+  .info-background img {
+    width: 100%;
+  }
 }
