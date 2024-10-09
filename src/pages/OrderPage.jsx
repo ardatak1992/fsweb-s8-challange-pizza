@@ -17,7 +17,7 @@ const OrderPage = () => {
                 Ana Sayfa
               </Link>{" "}
               -{" "}
-              <Link className="link active" to="/order">
+              <Link className="link active-link" to="/order">
                 Sipariş Oluştur
               </Link>
             </div>

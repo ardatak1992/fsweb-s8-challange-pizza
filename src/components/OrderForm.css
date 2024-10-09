@@ -36,7 +36,7 @@ form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 200px;
+  height: 270px;
   gap: 1rem;
   margin: 2rem 0;
 }
@@ -173,6 +173,10 @@ hr {
   .memo-section,
   .order-section {
     padding: 0 1rem;
+  }
+
+  .toppings-checkboxes{
+    height: 400px;
   }
 
   .order-section {

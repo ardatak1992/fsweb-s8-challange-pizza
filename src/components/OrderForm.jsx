@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-
+import axios from "axios";
 import "./OrderForm.css";
 
 import Checkbox from "./Checkbox";
@@ -71,7 +71,21 @@ const OrderForm = () => {
   function handleSubmit(e) {
     e.preventDefault();
     if (isValid) {
-      history.push({ pathname: "/success", formData: form, toppingCost, totalCost });
+      axios
+        .post(" https://reqres.in/api/pizza", {
+          form,
+          pizzaNum,
+          toppingCost,
+          totalCost,
+        })
+        .then((response) => console.log(response))
+        .catch((error) => console.log(error));
+      history.push({
+        pathname: "/success",
+        formData: form,
+        toppingCost,
+        totalCost,
+      });
     }
   }
 

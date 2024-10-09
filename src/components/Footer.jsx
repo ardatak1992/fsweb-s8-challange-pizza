@@ -33,7 +33,7 @@ const Footer = () => {
         <ul className="footer-menu">
           <h5>Hot Menu</h5>
           <li>
-            <a href="">Terminal Pizza</a>
+            <a className="footer-link" href="">Terminal Pizza</a>
           </li>
           <li>
             <a href="">5 Kişilik Hackathlon Pizza</a>

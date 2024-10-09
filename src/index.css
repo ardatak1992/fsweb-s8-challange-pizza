@@ -26,6 +26,13 @@
   src: url("./assets/fonts/Satisfy/Satisfy-Regular.ttf");
 }
 
+
+@font-face {
+  font-family: Quattrocento;
+  src: url("./assets/fonts/Quattrocento/Quattrocento-Regular.ttf");
+}
+
+
 :root {
   font-family: Barlow, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -44,11 +51,13 @@
 
 a {
   font-weight: 500;
-  color: var(--beige);
+  color: var(--darkgray);
   text-decoration: inherit;
+  border: none;
 }
+
 a:hover {
-  color: var(--yellow);
+  color: var(--red);
 }
 
 body {

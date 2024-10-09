@@ -1,18 +1,23 @@
 .banner {
-  background: url("../../Assets/Iteration-1-assets/home-banner.png");
+  background: url("src\\assets\\home-banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100vw;
   height: 65vh;
   min-width: 300px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .content h2{

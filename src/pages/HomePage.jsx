@@ -1,11 +1,18 @@
 import React from "react";
 import Banner from "../components/Banner";
-import Header from "../components/Header";
+import Navigation from "../components/Navigation";
+import CardContainer from "../components/CardContainer";
+import Menu from "../components/Menu";
+
+import "./HomePage.css"
 
 const HomePage = () => {
-  return <>
+  return <div className="home-page">
     <Banner />
-  </>;
+    <Navigation />
+    <CardContainer />
+    <Menu />
+  </div>;
 };
 
 export default HomePage;
