@@ -11,7 +11,7 @@ const Banner = () => {
           Kod acıktırır, <span>pizza doyurur.</span>
         </h1>
         <Link to="/order">
-          <button>Acıktım</button>
+          <button cy-test="banner-button">Acıktım</button>
         </Link>
       </div>
     </div>

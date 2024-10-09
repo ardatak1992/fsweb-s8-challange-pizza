@@ -72,7 +72,7 @@ const OrderForm = () => {
     e.preventDefault();
     if (isValid) {
       axios
-        .post(" https://reqres.in/api/pizza", {
+        .post("https://reqres.in/api/pizza", {
           form,
           pizzaNum,
           toppingCost,
@@ -103,8 +103,9 @@ const OrderForm = () => {
                 value="small"
                 onChange={handleChange}
                 checked={form.size === "small"}
+                
               />
-              <label htmlFor="small">S</label>
+              <label htmlFor="small" cy-test="small">S</label>
             </div>
             <div className="form-section">
               <input

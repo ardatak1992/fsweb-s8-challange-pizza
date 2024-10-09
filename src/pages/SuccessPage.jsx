@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Redirect } from "react-router-dom";
 import { capitalize } from "../helperFunctions";
 import Header from "../components/Header";
 import "./SuccessPage.css";
@@ -7,6 +7,10 @@ import "./SuccessPage.css";
 const SuccessPage = () => {
   const location = useLocation();
   
+  if (!location.formData) {
+    return <Redirect to="/"/>; // Redirect to form page if not submitted
+  }
+
   const [formData, setFormData] = useState(location.formData);
   const [totalCost, setTotalCost] = useState(location.totalCost);
   const [toppingCost, setToppingCost] = useState(location.toppingCost);
@@ -42,11 +46,11 @@ const SuccessPage = () => {
           <h3>Sipariş Toplamı</h3>
           <div className="topping-sum">
             <p>Seçimler</p>
-            <p>{toppingCost.toFixed(2)}</p>
+            <p>{toppingCost.toFixed(2)}₺</p>
           </div>
           <div className="total-sum">
             <p>Toplam</p>
-            <p>{totalCost.toFixed(2)}</p>
+            <p>{totalCost.toFixed(2)}₺</p>
           </div>
         </div>
       </div>
