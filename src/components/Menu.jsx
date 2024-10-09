@@ -1,5 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import icon1 from "../assets/icons/1.svg";
+import icon2 from "../assets/icons/2.svg";
+import icon3 from "../assets/icons/3.svg";
+import icon4 from "../assets/icons/4.svg";
+import icon5 from "../assets/icons/5.svg";
+import icon6 from "../assets/icons/6.svg";
+import food1 from "../assets/foods/food-1.png";
+import food2 from "../assets/foods/food-2.png";
+import food3 from "../assets/foods/food-3.png";
 
 import "./Menu.css";
 import MenuItem from "./MenuItem";
@@ -11,7 +20,7 @@ const menuItems = [
     score: 4.9,
     comments: 200,
     cost: 65,
-    imgUrl: "/src/assets/foods/food-1.png",
+    imgUrl: food1,
   },
   {
     id: 2,
@@ -19,7 +28,7 @@ const menuItems = [
     score: 4.3,
     comments: 321,
     cost: 100,
-    imgUrl: "/src/assets/foods/food-2.png",
+    imgUrl: food2,
   },
   {
     id: 3,
@@ -27,7 +36,7 @@ const menuItems = [
     score: 4.5,
     comments: 113,
     cost: 55,
-    imgUrl: "/src/assets/foods/food-3.png",
+    imgUrl: food3,
   },
 ];
 
@@ -38,27 +47,27 @@ const Menu = () => {
       <h2>Acıktıran Kodlara Doyuran Lezzeler</h2>
       <article className="menu-selectors">
         <Link className="menu-link" to="/order">
-          <img src="/src/assets/icons/1.svg" alt="" />
+          <img src={icon1} alt="" />
           Ramen
         </Link>
         <Link className="menu-link active" to="/order">
-          <img src="/src/assets/icons/2.svg" alt="" />
+          <img src={icon2} alt="" />
           Pizza
         </Link>
         <Link className="menu-link" to="/order">
-          <img src="/src/assets/icons/3.svg" alt="" />
+          <img src={icon3} alt="" />
           Burger
         </Link>
         <Link className="menu-link" to="/order">
-          <img src="/src/assets/icons/4.svg" alt="" />
+          <img src={icon4} alt="" />
           French fries
         </Link>
         <Link className="menu-link" to="/order">
-          <img src="/src/assets/icons/5.svg" alt="" />
+          <img src={icon5} alt="" />
           Fast food
         </Link>
         <Link className="menu-link" to="/order">
-          <img src="/src/assets/icons/6.svg" alt="" />
+          <img src={icon6} alt="" />
           Soft drinks
         </Link>
       </article>

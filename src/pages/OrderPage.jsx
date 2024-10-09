@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import OrderForm from "../components/OrderForm";
 
 import "./OrderPage.css";
+import formBanner from "../assets/form-banner.png"
 
 const OrderPage = () => {
   return (
     <div className="page">
       <div className="page-content">
         <div className="info-background">
-          <img src="/src/assets/form-banner.png" alt="" />
+          <img src={formBanner} alt="" />
 
           <div className="info-container">
             <div className="link-chain">

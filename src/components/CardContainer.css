@@ -35,11 +35,10 @@
   padding: 1rem;
   color: white;
   gap: 1rem;
-  
 }
 
 .card:first-child {
-  background: url("src/assets/cta/kart-1.png");
+  background: url("/src/assets/cta/kart-1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -51,7 +50,7 @@
 }
 
 .card:nth-child(2) {
-  background: url("src/assets/cta/kart-2.png");
+  background: url("/src/assets/cta/kart-2.png");
   background-color: var(--darkgray);
   background-repeat: no-repeat;
   background-size: 50% 50%;
@@ -60,7 +59,6 @@
 
 .card:nth-child(2) > .card-text {
   width: 60%;
-  
 }
 
 .card:nth-child(2) > .card-text > h2 {
@@ -90,8 +88,6 @@
 }
 
 @media (min-width: 920px) {
-  
-
   #cards {
     margin-top: 5rem;
   }
@@ -106,7 +102,6 @@
   }
 
   .card:first-child {
-    
     grid-row: span 2;
     height: 100%;
   }
@@ -124,5 +119,4 @@
     grid-column: 2;
     grid-row: 2;
   }
-
 }
