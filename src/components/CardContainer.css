@@ -39,7 +39,7 @@
 }
 
 .card:first-child {
-  background: url("src\\assets\\cta\\kart-1.png");
+  background: url("src/assets/cta/kart-1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -51,7 +51,7 @@
 }
 
 .card:nth-child(2) {
-  background: url("src\\assets\\cta\\kart-2.png");
+  background: url("src/assets/cta/kart-2.png");
   background-color: var(--darkgray);
   background-repeat: no-repeat;
   background-size: 50% 50%;
@@ -69,8 +69,7 @@
 }
 
 #cards .card:last-child {
-  background: url("src\\assets\\cta\\kart-3.png");
-
+  background: url("src/assets/cta/kart-3.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 80%;

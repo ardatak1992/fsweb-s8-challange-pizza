@@ -9,7 +9,7 @@ const OrderPage = () => {
     <div className="page">
       <div className="page-content">
         <div className="info-background">
-          <img src="src\assets\form-banner.png" alt="" />
+          <img src="src/assets/form-banner.png" alt="" />
 
           <div className="info-container">
             <div className="link-chain">

@@ -14,17 +14,17 @@ const Footer = () => {
           <address>
             <ul>
               <li>
-                <img src="src\assets\footer\icons\icon-1.png" alt="" />
+                <img src="src/assets/footer/icons/icon-1.png" alt="" />
                 <p>341 Londonderry Road, Istanbul Türkiye</p>
               </li>
               <li>
-                <img src="src\assets\footer\icons\icon-2.png" alt="" />
+                <img src="src/assets/footer/icons/icon-2.png" alt="" />
                 <a href="mailto:aciktim@teknolojikyemekler.com">
                   aciktim@teknolojikyemekler.com
                 </a>
               </li>
               <li>
-                <img src="src\assets\footer\icons\icon-3.png" alt="" />
+                <img src="src/assets/footer/icons/icon-3.png" alt="" />
                 <a href="tel:+90 216 123 45 67">+90 216 123 45 67</a>
               </li>
             </ul>
@@ -33,7 +33,9 @@ const Footer = () => {
         <ul className="footer-menu">
           <h5>Hot Menu</h5>
           <li>
-            <a className="footer-link" href="">Terminal Pizza</a>
+            <a className="footer-link" href="">
+              Terminal Pizza
+            </a>
           </li>
           <li>
             <a href="">5 Kişilik Hackathlon Pizza</a>
@@ -54,12 +56,12 @@ const Footer = () => {
         <div className="instagram">
           <h5>Instagram</h5>
           <div className="instagram-images">
-            <img src="src\assets\footer\insta\li-0.png" alt="" />
-            <img src="src\assets\footer\insta\li-1.png" alt="" />
-            <img src="src\assets\footer\insta\li-2.png" alt="" />
-            <img src="src\assets\footer\insta\li-3.png" alt="" />
-            <img src="src\assets\footer\insta\li-4.png" alt="" />
-            <img src="src\assets\footer\insta\li-5.png" alt="" />
+            <img src="src/assets/footer/insta/li-0.png" alt="" />
+            <img src="src/assets/footer/insta/li-1.png" alt="" />
+            <img src="src/assets/footer/insta/li-2.png" alt="" />
+            <img src="src/assets/footer/insta/li-3.png" alt="" />
+            <img src="src/assets/footer/insta/li-4.png" alt="" />
+            <img src="src/assets/footer/insta/li-5.png" alt="" />
           </div>
         </div>
       </div>
