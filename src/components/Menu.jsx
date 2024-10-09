@@ -6,28 +6,28 @@ import MenuItem from "./MenuItem";
 
 const menuItems = [
   {
-    id:1,
+    id: 1,
     title: "Terminal Pizza",
     score: 4.9,
     comments: 200,
     cost: 65,
-    imgUrl: "src/assets/foods/food-1.png",
+    imgUrl: "/src/assets/foods/food-1.png",
   },
   {
-    id:2,
+    id: 2,
     title: "Position Absolute Acı Pizza",
     score: 4.3,
     comments: 321,
     cost: 100,
-    imgUrl: "src/assets/foods/food-2.png",
+    imgUrl: "/src/assets/foods/food-2.png",
   },
   {
-    id:3,
+    id: 3,
     title: "useEffect Tavuklu Burger",
     score: 4.5,
     comments: 113,
     cost: 55,
-    imgUrl: "src/assets/foods/food-3.png",
+    imgUrl: "/src/assets/foods/food-3.png",
   },
 ];
 
@@ -38,27 +38,27 @@ const Menu = () => {
       <h2>Acıktıran Kodlara Doyuran Lezzeler</h2>
       <article className="menu-selectors">
         <Link className="menu-link" to="/order">
-          <img src="src/assets/icons/1.svg" alt="" />
+          <img src="/src/assets/icons/1.svg" alt="" />
           Ramen
         </Link>
         <Link className="menu-link active" to="/order">
-          <img src="src/assets/icons/2.svg" alt="" />
+          <img src="/src/assets/icons/2.svg" alt="" />
           Pizza
         </Link>
         <Link className="menu-link" to="/order">
-          <img src="src/assets/icons/3.svg" alt="" />
+          <img src="/src/assets/icons/3.svg" alt="" />
           Burger
         </Link>
         <Link className="menu-link" to="/order">
-          <img src="src/assets/icons/4.svg" alt="" />
+          <img src="/src/assets/icons/4.svg" alt="" />
           French fries
         </Link>
         <Link className="menu-link" to="/order">
-          <img src="src/assets/icons/5.svg" alt="" />
+          <img src="/src/assets/icons/5.svg" alt="" />
           Fast food
         </Link>
         <Link className="menu-link" to="/order">
-          <img src="src/assets/icons/6.svg" alt="" />
+          <img src="/src/assets/icons/6.svg" alt="" />
           Soft drinks
         </Link>
       </article>
