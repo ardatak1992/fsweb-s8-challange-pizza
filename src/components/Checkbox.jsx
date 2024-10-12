@@ -1,30 +1,23 @@
 import React from "react";
+import { capitalize } from "../helperFunctions";
 
 import "./Checkbox.css"
 
-const Checkbox = ({ name, form, handleChange,disabled }) => {
-  function capitalize(name) {
-    const words = name.split(" ");
-    return words
-      .map((word) => word.slice(0, 1).toUpperCase() + word.slice(1))
-      .join(" ");
-  }
-
- 
-
+const Checkbox = ({ label, name, form, handleChange, checked, disabled }) => {
+  
   return (
     <div className="checkbox-container">
       <input
         type="checkbox"
-        name="toppings"
-        value={name}
-        id={name}
+        name={name}
+        value={label}
+        id={label}
         onChange={handleChange}
-        checked={form.toppings.includes(name)}
+        checked={checked}
         disabled={disabled}
       />
-      <label htmlFor={name}>
-        {capitalize(name)}
+      <label htmlFor={label}>
+        {capitalize(label)}
       </label>
     </div>
   );

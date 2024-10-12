@@ -6,6 +6,8 @@ describe("Pizza App", () => {
     cy.intercept("POST", "https://reqres.in/api/pizza").as("getFood");
     cy.get('[cy-test="banner-button"]').click();
     cy.location("href").should("contain", "order");
+    cy.contains("Lütfen boyut seçiniz.").should("exist");
+    cy.contains("Lütfen hamur türü seçiniz.").should("exist");
     cy.get('[cy-test="small"]').click();
     cy.get("select").select("Kalın");
     cy.contains("Lütfen boyut seçiniz.").should("not.exist");
@@ -14,6 +16,13 @@ describe("Pizza App", () => {
     cy.contains("Kabak").click();
     cy.contains("Ananas").click();
     cy.contains("Soğan").click();
+    cy.contains("Peperonni").click();
+    cy.contains("Sosis").click();
+    cy.contains("Domates").click();
+    cy.contains("Sucuk").click();
+    cy.contains("Sarımsak").click();
+    cy.contains("Mısır").click();
+
     cy.contains("Sipariş Ver").click();
     cy.location("href").should("contain", "success");
 
@@ -60,5 +69,11 @@ describe("Pizza App", () => {
     cy.get('input[type="checkbox"]:not(:checked)')
       .its("length")
       .should("eq", 3);
+
+    cy.get('[cy-test="small"]').click();
+    cy.get("select").select("Kalın");
+    cy.contains("Lütfen boyut seçiniz.").should("not.exist");
+    cy.contains("Lütfen hamur türü seçiniz.").should("not.exist");
+    cy.contains("En fazla 10 malzeme seçebilirsiniz.").should("exist");
   });
 });

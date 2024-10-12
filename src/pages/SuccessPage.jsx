@@ -48,6 +48,11 @@ const SuccessPage = () => {
             <p>Seçimler</p>
             <p>{toppingCost.toFixed(2)}₺</p>
           </div>
+          {formData.fastDelivery && <div className="topping-cost">
+            <p>Hızlı Teslimat</p>
+            <p>{location.fastDeliveryCost}₺</p>
+          </div>}
+
           <div className="total-sum">
             <p>Toplam</p>
             <p>{totalCost.toFixed(2)}₺</p>

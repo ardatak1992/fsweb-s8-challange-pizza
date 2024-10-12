@@ -4,12 +4,15 @@ import axios from "axios";
 import "./OrderForm.css";
 
 import Checkbox from "./Checkbox";
+import RadioGroup from "./RadioGroup";
+import SelectGroup from "./SelectGroup";
 
 const initialForm = {
   size: "",
   dough: "",
   toppings: [],
   memo: "",
+  fastDelivery: false,
 };
 
 const basePizzaCost = 85;
@@ -30,6 +33,10 @@ const toppingArr = [
   "sucuk",
 ];
 
+const sizeOptions = ["small", "medium", "large"];
+const doughOptions = ["", "süpper ince", "ince", "kalın"];
+const fastDeliveryCost = 50;
+
 const OrderForm = () => {
   const [form, setForm] = useState(initialForm);
   const [pizzaNum, setPizzaNum] = useState(1);
@@ -41,7 +48,11 @@ const OrderForm = () => {
 
   useEffect(() => {
     const toppingSum = form.toppings.length * 5 * pizzaNum;
-    const totalSum = basePizzaCost * pizzaNum + toppingSum;
+    let totalSum = basePizzaCost * pizzaNum + toppingSum;
+    if (form.fastDelivery) {
+      totalSum += 50;
+    }
+
     const valid = form.size.length > 0 && form.dough.length > 0;
     setToppingCost(toppingSum);
     setTotalCost(totalSum);
@@ -57,6 +68,8 @@ const OrderForm = () => {
         );
       }
       setForm({ ...form, toppings: checkedToppings });
+    } else if (e.target.name === "fastDelivery") {
+      setForm({ ...form, fastDelivery: !form.fastDelivery });
     } else {
       setForm({ ...form, [e.target.name]: e.target.value });
     }
@@ -85,6 +98,7 @@ const OrderForm = () => {
         formData: form,
         toppingCost,
         totalCost,
+        fastDeliveryCost
       });
     }
   }
@@ -95,56 +109,26 @@ const OrderForm = () => {
         <div className="size">
           <h3>Boyut Seç</h3>
           <div className="radio-buttons">
-            <div className="form-section">
-              <input
-                type="radio"
-                name="size"
-                id="small"
-                value="small"
-                onChange={handleChange}
-                checked={form.size === "small"}
-                
-              />
-              <label htmlFor="small" cy-test="small">S</label>
-            </div>
-            <div className="form-section">
-              <input
-                type="radio"
-                name="size"
-                id="medium"
-                value="medium"
-                onChange={handleChange}
-                checked={form.size === "medium"}
-              />
-              <label htmlFor="medium">M</label>
-            </div>
-            <div className="form-section">
-              <input
-                type="radio"
-                name="size"
-                id="large"
-                value="large"
-                onChange={handleChange}
-                checked={form.size === "large"}
-              />
-              <label htmlFor="large">L</label>
-            </div>
+            <RadioGroup
+              name="size"
+              options={sizeOptions}
+              form={form}
+              handleChange={handleChange}
+              labels={["S", "M", "L"]}
+            />
           </div>
           {!form.size && <p className="error-message">Lütfen boyut seçiniz.</p>}
         </div>
         <div className="dough-type">
           <h3>Hamur Seç</h3>
-          <select
+          <SelectGroup
             name="dough"
-            id=""
-            onChange={handleChange}
-            defaultValue={form.dough}
-          >
-            <option value="">--Hamur Kalınlığı Seç--</option>
-            <option value="süpper ince">Süpper İnce</option>
-            <option value="ince">İnce</option>
-            <option value="kalın">Kalın</option>
-          </select>
+            options={doughOptions}
+            form={form}
+            handleChange={handleChange}
+            emptyValue="--Hamur Kalınlığı Seç--"
+          />
+
           {!form.dough && (
             <p className="error-message">Lütfen hamur türü seçiniz.</p>
           )}
@@ -157,15 +141,20 @@ const OrderForm = () => {
           {toppingArr.map((top) => (
             <Checkbox
               key={top}
-              name={top}
+              name="toppings"
+              label={top}
               form={form}
               handleChange={handleChange}
+              checked={form.toppings.includes(top)}
               disabled={
                 form.toppings.length >= 10 && !form.toppings.includes(top)
               }
             />
           ))}
         </div>
+        {form.toppings.length === 10 && (
+          <p className="error-message">En fazla 10 malzeme seçebilirsiniz.</p>
+        )}
       </div>
       <div className="memo-section">
         <h3>Sipariş Notu</h3>
@@ -176,6 +165,16 @@ const OrderForm = () => {
           placeholder="Siparişe Eklemek istediğin bir not var mı"
           onChange={handleChange}
         ></textarea>
+      </div>
+      <div className="fast-delivery-section">
+        <Checkbox
+          name="fastDelivery"
+          label="Hızlı Teslimat"
+          form={form}
+          handleChange={handleChange}
+          checked={form.fastDelivery}
+          disabled={false}
+        />
       </div>
       <hr />
       <div className="order-section">
@@ -208,6 +207,10 @@ const OrderForm = () => {
             <p>Seçimler </p>
             <p>{toppingCost.toFixed(2)}₺</p>
           </div>
+          {form.fastDelivery && <div className="topping-cost">
+            <p>Hızlı Teslimat</p>
+            <p>{fastDeliveryCost.toFixed(2)}₺</p>
+          </div>}
           <div className="total-cost">
             <p>Toplam </p>
             <p>{totalCost.toFixed(2)}₺</p>
